@@ -1,0 +1,18 @@
+This is a work sample made by Olle Bröms. Techniques used are:
+
+HTML5:
+HTML5Boilerplate.
+
+Twitter Bootstrap:
+Modals, tooltips, popovers, fixed navbar, alerts, buttons and responsive design.
+
+Zend Framework:
+Translations "ready", custom forms, custom validators and phpunit.
+
+Things that can be improved model management, css templating (less, stylus or sass), tests (10 tests, 4 errors), improved logic on the front-end and to be more efficient use Coffee-script!
+
+Safety
+
+Protection against SQL injections.
+Protection against XSS attacks.
+Development time: 1 day
