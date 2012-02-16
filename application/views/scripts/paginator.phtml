@@ -1,0 +1,17 @@
+<div class="pagination pagination-centered">
+	<ul>
+<? if($this->previous) { ?>
+		<li class="previous"><a href="<?= $this->url(array('page' => $this->previous)) ?>">←</a></li>
+<? } else { ?>
+		<li class="previous disabled"><a href="#">←</a></li>
+<? } ?>
+<? foreach($this->pagesInRange as $page) { ?>
+		<li<?= $page == $this->current ? ' class="active"' : '' ?>><a href="<?= $this->url(array('page' => $page)) ?>"><?= $page ?></a></li>
+<? } ?>
+<? if($this->next) { ?>
+		<li class="next"><a href="<?= $this->url(array('page' => $this->next)) ?>">→</a></li>
+<? } else { ?>
+		<li class="next disabled"><a href="#">→</a></li>
+<? } ?>
+	</ul>
+</div>

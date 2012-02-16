@@ -1,0 +1,52 @@
+/* I was lazy but I should used Less or similar */
+
+body {
+    position: relative;
+    overflow-y: scroll;
+    padding-top: 40px;
+}
+
+.alert ul {
+    margin: 0;
+}
+
+form .controls .alert {
+    margin-bottom: 0;
+}
+
+.table td > .cell {
+    height: 18px;
+    overflow: hidden;
+}
+
+.program-list .table .id,
+.program-list .table .action,
+.program-list .table .date,
+.program-list .table .start_time,
+.program-list .table .leadtext,
+.program-list .table .name,
+.program-list .table .b_line,
+.program-list .table .synopsis,
+.program-list .table .url { width: 11.1111%; }
+
+@media (max-width: 480px) {
+    .program-list .table th,
+    .program-list .table td {
+        width: 0;
+        display: none;
+    }
+    
+    .program-list .table .id,
+    .program-list .table .name,
+    .program-list .table .actions { display: table-cell; }
+    
+    .program-list .table .id { width: 20%; }
+    .program-list .table .name { width: 60%; }
+    .program-list .table .actions { width: 20%; }
+}
+
+@media (max-width: 980px) {
+    body {
+        padding-top: 0;
+    }
+}

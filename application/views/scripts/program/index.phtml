@@ -1,0 +1,56 @@
+<section class="row-fluid">
+	<div class="span12">
+<?= $this->action('list', 'program', null, array('order-by' => $this->orderBy, 'order' => $this->order, 'page' => $this->page)) ?>
+	</div>
+</section>
+<div class="modal hide fade" id="modal-program">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">×</a>
+		<h3><?= $this->translate('Program') ?></h3>
+	</div>
+	<div class="modal-body">
+<?= $this->action('create', 'program') ?>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn btn-primary save" data-loading-text="<?= $this->translate('Loading') ?>"><?= $this->translate('Save') ?></a>
+		<a href="#" class="btn cancel" data-dismiss="modal"><?= $this->translate('Cancel') ?></a>
+	</div>
+</div>
+<div class="modal hide fade" id="modal-program-delete">
+	<div class="modal-header">
+		<h3><?= $this->translate('Remove program') ?></h3>
+	</div>
+	<div class="modal-body">
+		<p><?= $this->translate('Do you want to delete the selected program?') ?></p>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn btn-primary yes" data-dismiss="modal" data-loading-text="<?= $this->translate('Loading') ?>"><?= $this->translate('Yes') ?></a>
+		<a href="#" class="btn no" data-dismiss="modal"><?= $this->translate('No') ?></a>
+	</div>
+</div>
+<div class="modal hide fade" id="modal-information">
+	<div class="modal-header">
+		<h3><?= $this->translate('Information') ?></h3>
+	</div>
+	<div class="modal-body">
+		<p>This is a work sample made by Olle Bröms. Techniques used are:</p>
+		<dl>
+			<dt>HTML5</dt>
+			<dd>HTML5Boilerplate.</dd>
+			<dt>Twitter Bootstrap</dt>
+			<dd>Modals, tooltips, popovers, fixed navbar, alerts, buttons and responsive design.</dd>
+			<dt>Zend Framework</dt>
+			<dd>Translations "ready", custom forms, custom validators and phpunit.</dd>
+		</dl>
+		<p>Things that can be improved model management, css templating (less, stylus or sass), tests (10 tests, 4 errors), improved logic on the front-end and to be more efficient use Coffee-script!</p>
+		<p><strong>Safety</strong></p>
+		<ul>
+			<li>Protection against SQL injections.</li>
+			<li>Protection against XSS attacks.</li>
+		</ul>
+		<p><strong>Development time: </strong> 1 day</p>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn" data-dismiss="modal"><?= $this->translate('Ok') ?></a>
+	</div>
+</div>

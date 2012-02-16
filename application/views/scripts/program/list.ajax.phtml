@@ -1,0 +1,38 @@
+<div class="program-list" data-reload="<?= $this->url(array('controller' => 'program', 'action' => 'list')) ?>">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+<? foreach($this->columns as $name => $column) { ?>
+                <th class="<?= $column ?>">
+<? if($column == $this->orderBy) { ?>
+                    <a href="<?= $this->url(array('order-by' => $column, 'order' => $this->order == 'ASC' ? 'desc' : 'asc')) ?>"><i class="icon-chevron-<?= $this->order == 'ASC' ? 'down' : 'up' ?>"></i> <?= $this->escape($name) ?></a>
+<? } else { ?>
+                    <a href="<?= $this->url(array('order-by' => $column, 'order' => 'asc')) ?>"><?= $this->escape($name) ?></a>
+<? } ?>
+                </th>
+    
+<? } ?>
+                <th class="actions"></th>
+            </tr>
+        </thead>
+        <tbody>
+<? foreach($this->programs as $program) { ?>
+            <tr>
+<? foreach($this->columns as $name => $column) { ?>
+<? if($program->$column != $this->excerpt($program->$column)) { ?>
+                <td class="<?= $column ?>"><div class="cell" title="<?= $this->escape($name) ?>" data-content="<?= $this->escape($program->$column) ?>"><?= $this->escape($this->excerpt($program->$column)) ?></div></td>
+<? } else { ?>
+                <td class="<?= $column ?>"><div class="cell"><?= $this->escape($this->excerpt($program->$column)) ?></div></td>
+<? } ?>
+
+<? } ?>
+                <td class="actions">
+                    <a href="<?= $this->url(array('controller' => 'program', 'action' => 'delete', 'id' => $program->id), null, true) ?>" class="icon-trash" data-target="#modal-program-delete" data-toggle="modal" title="<?= $this->translate('Delete') ?>"></a>
+                </td>
+            </tr>
+    
+<? } ?>
+        </tbody>
+    </table>
+<?= $this->programs ?>
+</div>
