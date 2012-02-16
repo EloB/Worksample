@@ -34,5 +34,5 @@
 <? } ?>
         </tbody>
     </table>
-<?= $this->programs ?>
+<?= $this->paginationControl($this->programs, null, null, array('controller' => 'program', 'action' => 'list')) ?>
 </div>

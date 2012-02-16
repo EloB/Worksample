@@ -11,10 +11,10 @@ Translations "ready", custom forms, custom validators and phpunit.
 
 Things that can be improved model management, css templating (less, stylus or sass), tests (10 tests, 4 errors), improved logic on the front-end and to be more efficient use Coffee-script!
 
-Safety
+Safety:
+- Protection against SQL injections.
+- Protection against XSS attacks.
 
-Protection against SQL injections.
-Protection against XSS attacks.
 Development time: 1 day
 
 Live demo:

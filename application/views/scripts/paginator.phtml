@@ -9,7 +9,7 @@
 		<li<?= $page == $this->current ? ' class="active"' : '' ?>><a href="<?= $this->url(array('page' => $page)) ?>"><?= $page ?></a></li>
 <? } ?>
 <? if($this->next) { ?>
-		<li class="next"><a href="<?= $this->url(array('page' => $this->next)) ?>">→</a></li>
+		<li class="next"><a href="<?= $this->url(array('controller' => $this->controller, 'action' => $this->action, 'page' => $this->next)) ?>">→</a></li>
 <? } else { ?>
 		<li class="next disabled"><a href="#">→</a></li>
 <? } ?>
