@@ -1,6 +1,8 @@
 <?php
-function _($str) {
-	return $str;
+if(function_exists('_') === false) {
+	function _($str) {
+		return $str;
+	}
 }
 
 // Define path to application directory
