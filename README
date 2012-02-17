@@ -1,7 +1,7 @@
 This is a work sample made by Olle Bröms. Techniques used are:
 
 HTML5:
-HTML5Boilerplate.
+HTML5Boilerplate incl. shiv for HTML5 backward compatibility.
 
 Twitter Bootstrap:
 Modals, tooltips, popovers, fixed navbar, alerts, buttons and responsive design.
@@ -14,6 +14,8 @@ Things that can be improved model management, css templating (less, stylus or sa
 Safety:
 - Protection against SQL injections.
 - Protection against XSS attacks.
+- Lacks protection against CSRF attacks.
+- Doesnt have any Captcha.
 
 Development time: 1 day
 
