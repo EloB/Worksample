@@ -10,12 +10,17 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		/**
 		 * @var Zend_View_Helper_HeadMeta
 		 */
-		$headMeta = $view->headMeta();
+		$headMeta = $view->getHelper('HeadMeta');
 		
 		/**
 		 * @var Zend_View_Helper_HeadLink
 		 */
-		$headLink = $view->headLink();
+		$headLink = $view->getHelper('HeadLink');
+		
+		/**
+		 * @var Zend_View_Helper_HeadScript
+		 */
+		$headScript = $view->getHelper('HeadScript');
 		
 		/**
 		 * @var Zend_View_Helper_FormErrors
@@ -30,6 +35,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		->appendStylesheet('/css/bootstrap' . ($this->getEnvironment() == 'production' ? '.min' : '') . '.css', false)
 		->appendStylesheet('/css/bootstrap-responsive' . ($this->getEnvironment() == 'production' ? '.min' : '') . '.css', false)
 		->appendStylesheet('/css/layout.css', false);
+		
+		$headScript
+		->appendFile('/js/modernizr.min.js');
 		
 		$formErrors
 		->setElementStart('<div%s><a class="close" href="#" data-dismiss="alert">×</a><ul class="unstyled"><li>')
